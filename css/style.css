@@ -23,6 +23,12 @@
     border: 1px solid white;
 }
 
+.content-main {
+    height: 600px;
+    background-color: #8a2be2;
+    border: 1px solid white;
+}
+
 .sidebar {
     background-image: url(../img/sidebar-bg.png);
     background-color: #051e34;
