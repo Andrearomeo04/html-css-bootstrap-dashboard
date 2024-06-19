@@ -20,14 +20,11 @@
                         </div>
                     </div>
                     <div class="col-10">
-                        <nav class="navbar bg-body-tertiary">
-                            <form class="container-fluid">
-                                <div class="input-group">
-                                    <span class="input-group-text bg-color-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    <input type="text" class="form-control border-start-0 bg-color-2" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
-                                </div>
-                            </form>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <nav class="navbar navbar-expand">
+                            <div class="container-fluid">
+                                <form class="d-flex w-100" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                </form>
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
                                         <a class="nav-link active d-none d-lg-inline-block" aria-current="page" href="#"><i class="fa-solid fa-list-ul"></i></a>
@@ -39,12 +36,21 @@
                                         <a class="nav-link d-none d-lg-inline-block" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-warning" href="#"><i class="fa-solid fa-bell"></i></a>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-bell text-warning"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                              <li><button class="dropdown-item" type="button">Profilo</button></li>
+                                              <li><button class="dropdown-item" type="button">Fatturazione</button></li>
+                                              <li><button class="dropdown-item" type="button">Logout</button></li>
+                                            </ul>
+                                          </div>
+                                          
                                     </li>
                                 </ul>
                             </div>
                         </nav>
-                        
                     </div>
                 </div>
             </div>    
@@ -101,11 +107,12 @@
                         <div class="col-12 col-md-4 p-3">
                             <div class="float-lg-end">
                                 <p class="fs-5">Studenti online negli ultimi 30 minuti</p>
-                            <span class="fs-1"><strong>125</strong></span>
+                                <span class="fs-1"><strong>125</strong></span>
                             </div>                                 
                         </div>
                     </div>   
                 </div>
+            </div>
             <div class="card-section mt-4">
                 <div class="container-fluid">
                     <div class="row">
@@ -166,7 +173,7 @@
                                         <td class="d-none d-md-table-cell"><span>19 Feb 2021</span></td>
                                         <td class="d-none d-md-table-cell"><span>20%</span></td>
                                         <td><span class="rounded-pill text-white bg-danger px-2">failed</span></td>
-                                        <td><button type="button" class="btn btn-outline-secondary"><span><i class="fa-solid fa-pen"></i></span>
+                                        <td><button type="button" class="btn btn-outline-secondary"><span><i class="fa-solid fa-pen"></i></span></button>
                                             <button type="button" class="btn btn-outline-secondary"><span><i class="fa-solid fa-trash"></i></span></button>
                                         </td>
                                       </tr>
@@ -338,17 +345,7 @@
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Sign in</button>
                 </div>
-              </form>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
+            </form>
         </div>
       </div>
 
