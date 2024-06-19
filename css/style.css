@@ -53,6 +53,10 @@ td img {
     width: 30px;
 }
 
+.offcanvas.offcanvas-end {
+    width: 100%;
+}
+
 .bg-color-1 {
     background-color: #165bba;
 }
@@ -67,5 +71,8 @@ td img {
     }
     .main-content {
         width: calc(100vw - 150px);
+    }
+    .offcanvas.offcanvas-end {
+        width: 50%;
     }
 }

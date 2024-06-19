@@ -79,6 +79,10 @@
                         <div class="col-12 col-md-4 p-3 order-md-3">
                             <div class="float-lg-end pe-5">
                                 <h4>Nuovo Studente</h4>
+                                <button class="btn btn-primary border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                    <i class="fa-solid fa-plus text-white"></i>
+                                </button>
+                                  
                             </div>  
                         </div>
                         <div class="col-12 col-md-4 p-3">
@@ -106,7 +110,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 col-lg-8">
-                            <div class="card w-100" style="width: 18rem;">
+                            <div class="card w-100 mb-4" style="width: 18rem;">
                                 <div class="card-header">
                                   <h2>Prossime classi</h2>
                                 </div>
@@ -196,6 +200,43 @@
                                     </tbody>
                                   </table>
                             </div>
+                            <div class="card w-100 mb-4" style="width: 18rem;">
+                                <div class="card-header">
+                                  <h2>F.A.Q</h2>
+                                </div>
+                                <div class="accordion accordion-flush px-3" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                          <span>Come posso aggiungere un nuovo studente?</span>
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body"><span>Clicca sul + in alto nella sezione blu</span></div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                          <span>Come posso accedere alle informazioni del mio account?</span>
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body"><span>Clicca sull'icona della campanella</span></div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                          <span>Posso usare questa dashboard da mobile?</span>
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body"><span>Assolutamente si!</span></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
                         </div>
                         <div class="col-12 col-lg-4">
                             <div class="card w-100" style="width: 18rem;">
@@ -208,8 +249,27 @@
                                       <li class="list-group-item"><input type="checkbox"> Lezione su bootstrap 5 in classe #75</li>
                                       <li class="list-group-item"><input type="checkbox"> Controllare username github studenti</li>
                                     </ul>
-                                  </div>
+                                </div>
                             </div>
+                            <div class="card mt-4">
+                                <div class="card-body">
+                                    <div class="card m-2">
+                                        <img src="./img/stats.jpeg" class="card-img-top" alt="stats">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Utenti attivi</h5>
+                                          <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                          <li class="list-group-item">Gennaio: 1200</li>
+                                          <li class="list-group-item">Febbraio: 800</li>
+                                          <li class="list-group-item">Gennaio: 1500</li>
+                                        </ul>
+                                        <div class="card-body">
+                                          <a href="#" class="card-link">Visualizza report approfondito</a>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -217,6 +277,81 @@
         </div>
     </div>
     
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo studente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <div class="row">
+                <div class="col">
+                    <label>Nome</label>
+                  <input type="text" class="form-control" aria-label="First name">
+                </div>
+                <div class="col">
+                    <label>Cognome</label>
+                  <input type="text" class="form-control" aria-label="Last name">
+                </div>
+              </div>
+            </div>
+            <form class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <div class="input-group">
+                      <div class="input-group-text bg-color-2">@</div>
+                      <input type="text" class="form-control" id="specificSizeInputGroupUsername">
+                    </div>
+                  </div>
+                
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Indirizzo</label>
+                  <input type="text" class="form-control" id="inputAddress">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Città</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">Stato</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>Scegli...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="inputZip" class="form-label">CAP</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Seleziona per proseguire
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
